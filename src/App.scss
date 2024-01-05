@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@200;300;500;600&display=swap');
+@import './Style/font-awesome-4.7.0/scss/font-awesome.scss';
+:root{
+  scroll-behavior:smooth;
+  --white: #fff;
+  --black: #000;
+  --primary-color: #FCAB6F;
+  --secondary-color: #A0EEE4;
+  --descriptive-color: #83827E;
+  --section-header: 38px;
+  font-family: Alexandria;
+  color: var(--white);
+}
+*{
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+   box-sizing: border-box; 
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #232526;
+  background: -webkit-linear-gradient(to right, #414345, #222324);
+  background: radial-gradient(ellipse at top, #414345, #222324);
+}
+
+.main-container{
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  height: 100%;
+}
+
+@media (max-width:1400px){
+
+}
+@media (max-width:1200px){
+
+}
+@media (max-width:992px){
+  // from here dropdown
+  :root{
+    --section-header: 32px;
+  }
+
+}
+@media (max-width:772px){
+
+}
+@media (max-width:576px){
+
+}

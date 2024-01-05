@@ -1,0 +1,120 @@
+.character{
+    transition: opacity 0.1s ease-out;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    transition-delay: 1.7s;
+    transition-property: opacity;
+    .config{
+        user-select: none;
+        cursor:default;
+        width: max-content;
+    }
+    .char-level{
+        position: absolute;
+        top:-50%;
+        left:50%;
+        color: rgb(0, 0, 0);
+        font-size: 24px;
+        transform: translateX(-50%);
+    }
+    .char-health{
+        position: absolute;
+        top:-80%;
+        left:50%;
+        color: rgb(0, 0, 0);
+        font-size: 24px;
+        transform: translateX(-50%);
+    }
+    .char-stamina{
+        position: absolute;
+        top:-110%;
+        left:50%;
+        color: rgb(0, 0, 0);
+        font-size: 24px;
+        transform: translateX(-50%);
+    }
+    .char-stats{
+        transition: opacity 0.2s ease-out;
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+        user-select:none;
+        cursor: auto;
+    }
+}
+.character[data-active=true]{
+    opacity: 1;
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left:25%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    background-color: rgb(255, 0, 0);
+    overflow: visible;
+    cursor: pointer;
+    .config{
+        user-select: none;
+        cursor: default;
+    }
+}
+.char-stats[data-stats=true]{
+    --height: max-content;
+    position: absolute;
+    display: flex;
+    align-content:space-between;
+    opacity: 1;
+    bottom:0;
+    left:50%;
+    width: 200px;
+    height: var(--height);
+    padding: 15px;
+    transform: translate(-50%, calc(100% + 25px));
+    border-radius: 8px;
+    background-color: antiquewhite;
+    border: 2px solid rgba(165, 71, 42, 0.3);
+    overflow: visible;
+    &:after{
+        content: "";
+        position: absolute;
+        top:0;
+        left:50%;
+        transform: translate(-50%, -100%);
+        border-bottom: 20px solid antiquewhite;
+        border-left: 30px solid transparent;
+        border-right: 30px solid transparent;
+    }
+    .skills{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        width: 100%;
+        gap: 10px;
+        margin: 0;
+        padding: 0;
+        color: black;
+        .skill{
+            background-color: rgb(235, 209, 177);
+            width: 100%;
+            margin: 0;
+            padding: 5px 5px 5px 10px;
+            border: 2px solid rgba(165, 42, 42, 0.185);
+            border-radius: 8px;
+            box-shadow: -3px 3px 0px 1px rgba(235, 209, 177, 0.7);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .count{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            border-radius: 8px;
+            background-color: antiquewhite;
+        }
+    }
+}
