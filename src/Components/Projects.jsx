@@ -10,8 +10,7 @@ const Projects = () => {
     <>
       <div className="projects-container">
         <h1 id="projects-section">Projects</h1>
-        <button className="visibility-button" value={visible} onClick={() => setVisible((e) => !e)}>{ visible ? "Show Projects" : "Hide Projects"}</button>
-        <div className='cards-container' data-hidden={visible}>
+        <div className='cards-container' data-hidden={false}>
         <Cards/>
         </div>
       </div>
