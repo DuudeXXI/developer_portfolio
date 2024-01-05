@@ -2,7 +2,7 @@ import cards_data from '../Data/cards'
 const Project_card = () => {
     return ( 
         cards_data.map(card => 
-            <div className="card">
+            <div className={`card ${card.invert ? "dark" : null}`} >
             <div className="card-image">
               <div className="card-builtWith">{card.builtWith}</div>
               <img src={card.image} alt="Card"></img>

@@ -52,6 +52,13 @@
 
   }
 }
+.dark{
+  .card-image{
+    .card-content{
+      color: black;
+    }
+  }
+}
 .cards-container {
   display: grid;
   flex-flow: row nowrap;
